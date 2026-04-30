@@ -1,0 +1,49 @@
+# Heart Attack Risk Predictor + RAG System
+# ==========================================
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+# ── Core ML Libraries (already in your environment) ──
+pandas
+numpy
+scikit-learn
+seaborn
+matplotlib
+
+# ── RAG / LLM Framework ──
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-text-splitters>=0.0.1
+
+# ── Vector Database (local, no server needed) ──
+chromadb>=0.4.22
+
+# ── LLM Providers (choose ONE based on your preference) ──
+
+# Option A: Google Gemini (RECOMMENDED - free tier)
+langchain-google-genai>=0.0.10
+google-generativeai>=0.5.0
+
+# Option B: Groq (Very fast inference)
+langchain-groq>=0.1.0
+groq>=0.4.0
+
+# Option B: OpenAI (paid, comment out if using Gemini)
+# langchain-openai>=0.0.8
+# openai>=1.14.0
+
+# Option C: Ollama (local, free — install Ollama separately from https://ollama.ai)
+# No extra pip packages needed, just:
+#   ollama pull llama3.2
+#   ollama pull nomic-embed-text
+
+# ── Document Processing ──
+tiktoken          # Token counting for chunking
+pypdf             # Load PDF knowledge base if needed
+
+# ── Utilities ──
+python-dotenv     # Load .env file for API keys
+
+# ── Voice Integration ──
+streamlit>=1.39.0 # Required for audio input
+gTTS              # Google Text-to-Speech
