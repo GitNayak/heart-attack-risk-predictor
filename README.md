@@ -4,14 +4,16 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Logistic%20Regression-green)
 ![RAG](https://img.shields.io/badge/AI-RAG%20Integrated-purple)
+![Voice Integration](https://img.shields.io/badge/Voice-STT%20%26%20TTS-orange)
 
-A modern, interactive web application that predicts a patient's risk of having a heart attack based on clinical data, and provides personalized, medically-grounded explanations using **Retrieval-Augmented Generation (RAG)**.
+A modern, interactive web application that predicts a patient's risk of having a heart attack based on clinical data, and provides personalized, medically-grounded explanations using **Retrieval-Augmented Generation (RAG)** and **Multimodal Voice Integration**.
 
 ## 🚀 Features
 
 * **Machine Learning Prediction:** Uses a trained Logistic Regression model (`heart.pkl`) on standard clinical metrics (Age, Cholesterol, Blood Pressure, ECG, etc.) to instantly calculate risk probability.
 * **AI-Powered Explanations:** Integrates a RAG pipeline (using ChromaDB) to explain *why* the model made its prediction, anchoring the LLM strictly to the mathematical output to prevent hallucinations.
-* **Medical Assistant Chat:** A dedicated tab allowing users to ask general clinical questions about heart health, answered by the AI using a verified knowledge base (`rag_knowledge_base.md`).
+* **Voice AI (Speech-to-Text & Text-to-Speech):** Speak directly to the AI using the built-in microphone widget (powered by the Whisper AI model), and listen as the application automatically reads its medical explanations out loud using `gTTS`.
+* **Medical Assistant Chat:** A dedicated tab allowing users to ask general clinical questions about heart health via text or voice, answered by the AI using a verified knowledge base (`rag_knowledge_base.md`).
 * **Multi-Provider LLM Support:** Easily switch between **Groq**, **Google Gemini**, and **OpenAI** via the sidebar settings.
 * **Premium UI:** Custom-styled dark mode Streamlit interface with dynamic risk cards and clean chat elements.
 
@@ -20,6 +22,7 @@ A modern, interactive web application that predicts a patient's risk of having a
 * **Frontend:** Streamlit (with custom CSS injections)
 * **Machine Learning:** Scikit-Learn, Pandas, NumPy
 * **AI/RAG:** LangChain, ChromaDB
+* **Voice Processing:** gTTS (Text-to-Speech), Whisper API (Speech-to-Text)
 * **Embeddings:** HuggingFace / SentenceTransformers
 * **LLM Providers:** Groq, Google Gemini, OpenAI
 
