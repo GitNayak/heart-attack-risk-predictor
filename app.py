@@ -302,7 +302,7 @@ with tab1:
             # straight from the heart.csv dataset so our scaling perfectly mimics the original notebook training.
             df_features = rag.df[feature_order]
             means = df_features.mean().values
-            stds = df_features.std(ddof=0).values # (ddof=0 perfectly matches sklearn's algorithm)
+            stds = df_features.std(ddof=0).values.copy() # (ddof=0 perfectly matches sklearn's algorithm)
             stds[stds == 0] = 1.0 # Fail-safe specifically to prevent mathematical division by zero
             
             X_scaled = (raw_X - means) / stds
